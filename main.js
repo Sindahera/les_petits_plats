@@ -1,11 +1,17 @@
 // import dependencies
 import "tailwindcss/tailwind.css"
+ 
+// import pages
+import {IndexPage} from "./pages/index.js"
+window.customElements.define("index-page", IndexPage);
+// import components
 
-document.body.insertAdjacentHTML('afterbegin', `
-  <div class="m-12">
-    <h1 class="text-yellow-500 font-semibold text-4xl">
-      Les Petits Plats
-    </h1>
-    <p>algorithms placement</p>
-  </div>
-`);
+import{ApplianceSelect} from "./pages/components/appliance-select.js"
+window.customElements.define("appliance-select", ApplianceSelect);
+import{UstensilSelect} from "./pages/components/ustensil-select.js"
+window.customElements.define("ustensil-select", UstensilSelect);
+
+
+// Open the index page
+document.body.insertAdjacentHTML("afterbegin", "<index-page></index-page>");
+ 
